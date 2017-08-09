@@ -1,10 +1,9 @@
 'use strict';
 
 const expect = require('expect');
-const SLL = require('./index.js');
+const SLL = require('../index.js');
 
 describe('Testing linkedlist', () => {
-
   describe('testing appendNode', () => {
     it('should return 3 as the value of the head', () => {
       let nodeHead = new SLL(3);
@@ -25,7 +24,6 @@ describe('Testing linkedlist', () => {
     });
   });
 
-
   describe('testing remove', () => {
     it('should return 22 as the value of the new head', () => {
       let nodeHead = new SLL(11);
@@ -40,7 +38,6 @@ describe('Testing linkedlist', () => {
       nodeHead.appendNode(new SLL(33));
       nodeHead.remove(nodeHead);
       expect(nodeHead.next.value).toEqual(33);
-
     });
     it('should return null', () => {
       let nodeHead = new SLL(3);
@@ -50,5 +47,4 @@ describe('Testing linkedlist', () => {
       expect(nodeHead.next.next.next).toEqual(null);
     });
   });
-
 });
